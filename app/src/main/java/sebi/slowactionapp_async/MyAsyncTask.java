@@ -2,9 +2,6 @@ package sebi.slowactionapp_async;
 
 import android.os.AsyncTask;
 
-/**
- * Created by Sebi on 30.05.15.
- */
 public class MyAsyncTask extends AsyncTask<Long, Long, Long> {
 
     @Override

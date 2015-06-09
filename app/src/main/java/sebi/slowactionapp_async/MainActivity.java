@@ -13,6 +13,8 @@ public class MainActivity extends Activity {
 
     public EditText input;
     public TextView output;
+    final String succFormatString = "SUCCESS";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +25,7 @@ public class MainActivity extends Activity {
     }
 
     public void clicked(final View v) {
-        final String s = input.getText().toString();
-        final String succFormatString = "SUCCESS";
+        String s = input.getText().toString();
 
         try {
             final long total = Long.parseLong(s);
@@ -50,14 +51,6 @@ public class MainActivity extends Activity {
             final String message = "FAILURE" + " " + e.getMessage();
             output.setText(message);
         }
-    }
-
-    public void changeInput(Long... values) {
-        input.setText(String.valueOf(values[0]));
-    }
-
-    public void changeOutput(Long result) {
-        output.setText(String.format("SUCCESS", result));
     }
 
     @Override
